@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">TinderLibros</string>
+    <string name="login_username">Usuario</string>
+    <string name="login_password">Contraseña</string>
+    <string name="login_message">Bienvenido</string>
+    <string name="signin_message">Registrate</string>
+    <string name="login_button">Iniciar sesión</string>
+    <string name="signin_button">Registrarme</string>
+    <string name="principal_message">Aquí estan los libros</string>
+</resources>
