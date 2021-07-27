@@ -68,30 +68,35 @@
         app:layout_constraintStart_toStartOf="parent">
 
         <ImageView
+            android:id="@+id/hamburger"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_weight="1"
             android:src="@drawable/ic_hamburguer" />
 
         <ImageView
+            android:id="@+id/previous"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_weight="1"
             android:src="@drawable/ic_previous" />
 
         <ImageView
+            android:id="@+id/read"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_weight="1"
             android:src="@drawable/ic_book" />
 
         <ImageView
+            android:id="@+id/next"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_weight="1"
             android:src="@drawable/ic_next" />
 
         <ImageView
+            android:id="@+id/search"
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:layout_weight="1"

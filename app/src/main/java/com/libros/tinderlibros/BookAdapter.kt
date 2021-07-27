@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.squareup.picasso.Picasso
 
 class BookAdapter(private val books: ArrayList<Book>, context: Context) : RecyclerView.Adapter<BookAdapter.BookHolder>() {
 
@@ -24,19 +25,12 @@ class BookAdapter(private val books: ArrayList<Book>, context: Context) : Recycl
 
 
     class BookHolder(v: View) : RecyclerView.ViewHolder(v){
-        val titleBook = itemView.findViewById(R.id.tv_title) as TextView
-        val coverBook = itemView.findViewById(R.id.iv_cover) as ImageView
+        private val titleBook = itemView.findViewById(R.id.tv_title) as TextView
+        private val coverBook = itemView.findViewById(R.id.iv_cover) as ImageView
 
         fun bind(book: Book) {
             titleBook.text = book.name
-            coverBook.loadUrl(book.urlImage)
+            Picasso.get().load(book.urlImage).into(coverBook)
         }
-
-        fun ImageView.loadUrl(url: String) {
-            //TODO: add picaso
-            //Piccaso.with(context).load(url).into(this)
-        }
-
-
     }
 }
