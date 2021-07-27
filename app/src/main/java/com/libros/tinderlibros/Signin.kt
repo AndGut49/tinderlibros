@@ -19,7 +19,7 @@ class Signin : AppCompatActivity() {
 
         loginButton =findViewById(R.id.loginButton)
         loginButton.setOnClickListener{
-            var loginIntent = Intent(this,MainActivity::class.java)
+            var loginIntent = Intent(this,Principal::class.java)
             startActivity(loginIntent)
         }
     }
