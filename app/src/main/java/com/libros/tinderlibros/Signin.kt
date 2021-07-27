@@ -17,10 +17,20 @@ class Signin : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_signin)
 
-        loginButton =findViewById(R.id.loginButton)
+        loginButton = findViewById(R.id.loginButton)
+        signinButton = findViewById(R.id.signinButton)
+
         loginButton.setOnClickListener{
-            var loginIntent = Intent(this,Principal::class.java)
-            startActivity(loginIntent)
+            toMainActivity()
         }
+
+        signinButton.setOnClickListener {
+            toMainActivity()
+        }
+    }
+
+    private fun toMainActivity() {
+        val loginIntent = Intent(this,Principal::class.java)
+        startActivity(loginIntent)
     }
 }

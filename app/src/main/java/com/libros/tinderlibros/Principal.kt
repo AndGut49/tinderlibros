@@ -6,14 +6,13 @@ import android.widget.ImageView
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import androidx.viewpager.widget.ViewPager
 
 class Principal : AppCompatActivity() {
 
-    //Recyclerview elements
-    private lateinit var mLinearLayoutManager: LinearLayoutManager
-    private lateinit var mRvBooks : RecyclerView
-
-
+//ViewPager
+    private lateinit var viewPager : ViewPager
+    private lateinit var pagerAdapter: BooksPagerAdapter
 
     //Buttons
     private lateinit var mBtnMenu: ImageView
@@ -25,13 +24,15 @@ class Principal : AppCompatActivity() {
 
     val books = arrayListOf<Book>(Book("El principito", "https://ia800307.us.archive.org/view_archive.php?archive=/0/items/olcovers229/olcovers229-L.zip&file=2295636-L.jpg"),
         Book("It", "https://covers.openlibrary.org/b/id/10326484-L.jpg"),
-                Book("Strange Animals", "https://covers.openlibrary.org/b/id/8340872-L.jpg"))
+                Book("Strange Animals", "https://covers.openlibrary.org/b/id/8340872-L.jpg"),
+                Book("Electric dreams", "https://covers.openlibrary.org/b/id/10112227-L.jpg"),
+                Book("Atlas cloud", "https://covers.openlibrary.org/b/id/8497190-L.jpg"))
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_principal)
 
-        setUpRecyclerview()
+        setUpViewPager()
         setUpButtons()
     }
 
@@ -46,13 +47,16 @@ class Principal : AppCompatActivity() {
             notProgrammedYet()
         }
         mBtnPrevious.setOnClickListener {
-            mRvBooks.layoutManager?.scrollToPosition(mLinearLayoutManager.findLastVisibleItemPosition() - 1)
+            val currentPosition = viewPager.currentItem
+            viewPager.currentItem = currentPosition - 1
         }
         mBtnRead.setOnClickListener {
-            notProgrammedYet()
+            val currentPosition = viewPager.currentItem
+            Toast.makeText(this, "Te gusta ${books[currentPosition % books.size].name}", Toast.LENGTH_SHORT).show()
         }
         mBtnNext.setOnClickListener {
-            mRvBooks.layoutManager?.scrollToPosition(mLinearLayoutManager.findLastVisibleItemPosition() + 1)
+            val currentPosition = viewPager.currentItem
+            viewPager.currentItem = currentPosition + 1
         }
         mBtnSearch.setOnClickListener {
             notProgrammedYet()
@@ -63,12 +67,9 @@ class Principal : AppCompatActivity() {
         Toast.makeText(this,"Funcion no programada aún", Toast.LENGTH_SHORT).show()
     }
 
-    private fun setUpRecyclerview() {
-        mRvBooks = findViewById(R.id.rv_books)
-        mLinearLayoutManager = LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false)
-
-        val mAdapter = BookAdapter(books, this)
-        mRvBooks.layoutManager = mLinearLayoutManager
-        mRvBooks.adapter = mAdapter
+    private fun setUpViewPager() {
+        viewPager = findViewById(R.id.vp_books)
+        pagerAdapter = BooksPagerAdapter(supportFragmentManager, books)
+        viewPager.adapter = pagerAdapter
     }
 }
