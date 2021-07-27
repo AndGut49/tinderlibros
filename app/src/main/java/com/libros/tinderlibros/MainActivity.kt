@@ -19,11 +19,21 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        signinButton =findViewById(R.id.signinButton)
-        signinButton.setOnClickListener{
-            var siginIntent = Intent(this,Signin::class.java)
-            startActivity(siginIntent)
+        loginButton = findViewById(R.id.loginButton)
+        signinButton = findViewById(R.id.signinButton)
+
+        loginButton.setOnClickListener{
+            toMainActivity()
         }
 
+        signinButton.setOnClickListener {
+            toMainActivity()
+        }
+    }
+
+    private fun toMainActivity() {
+        val loginIntent = Intent(this,Principal::class.java)
+        startActivity(loginIntent)
+        finish()
     }
 }

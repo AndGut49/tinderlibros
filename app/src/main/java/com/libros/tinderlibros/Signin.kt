@@ -32,5 +32,6 @@ class Signin : AppCompatActivity() {
     private fun toMainActivity() {
         val loginIntent = Intent(this,Principal::class.java)
         startActivity(loginIntent)
+        finish()
     }
 }
