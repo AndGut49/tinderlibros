@@ -14,7 +14,7 @@
         android:theme="@style/Theme.TinderLibros">
         <activity android:name=".DetailsActivity"></activity>
         <activity android:name=".Principal" />
-        <activity android:name=".Signin"/>
+        <activity android:name=".SigninActivity"/>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

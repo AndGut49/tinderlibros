@@ -6,7 +6,7 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 
-class Signin : AppCompatActivity() {
+class SigninActivity : AppCompatActivity() {
 
     private lateinit var loginButton : Button
     private lateinit var signinButton : Button
@@ -21,7 +21,7 @@ class Signin : AppCompatActivity() {
         signinButton = findViewById(R.id.signinButton)
 
         loginButton.setOnClickListener{
-            toMainActivity()
+            toLoginActivity()
         }
 
         signinButton.setOnClickListener {
@@ -33,5 +33,10 @@ class Signin : AppCompatActivity() {
         val loginIntent = Intent(this,Principal::class.java)
         startActivity(loginIntent)
         finish()
+    }
+
+    private fun toLoginActivity(){
+        val loginIntent = Intent(this,MainActivity::class.java)
+        startActivity(loginIntent)
     }
 }
