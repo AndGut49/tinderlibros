@@ -12,9 +12,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.TinderLibros">
+<<<<<<< HEAD
         <activity android:name=".DetailsActivity"></activity>
         <activity android:name=".Principal" />
         <activity android:name=".SigninActivity"/>
+=======
+        <activity android:name=".libroDetalleActivity"></activity>
+        <activity android:name=".Principal" />
+        <activity android:name=".Signin" />
+>>>>>>> jim
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
