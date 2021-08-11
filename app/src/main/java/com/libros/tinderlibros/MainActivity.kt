@@ -14,7 +14,7 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var loginButton : Button
     private lateinit var signinButton : Button
-    private lateinit var usernameInput : EditText
+    //private lateinit var usernameInput : EditText
     private lateinit var passwordInput : EditText
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -23,16 +23,18 @@ class MainActivity : AppCompatActivity() {
 
         loginButton = findViewById(R.id.loginButton)
         signinButton = findViewById(R.id.signinButton)
-        usernameInput = findViewById(R.id.userInput)
-        passwordInput = findViewById(R.id.paswordInput)
+//        usernameInput = findViewById(R.id.userInput)
+//        passwordInput = findViewById(R.id.paswordInput)
 
         loginButton.setOnClickListener{
-            if( usernameInput.text.toString() == user && passwordInput.text.toString() == password){
+  /*          if( usernameInput.text.toString() == user && passwordInput.text.toString() == password){
                 toMainActivity()
             }
             else{
                 showDialog("Credenciales invalidas","Usuario o contraseña incorrecto. Por favor, verifica tus datos")
             }
+
+   */
         }
 
         signinButton.setOnClickListener {
