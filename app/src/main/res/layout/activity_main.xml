@@ -33,7 +33,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/white"
-        android:padding="4dp"
+        android:padding="1dp"
         android:ellipsize="end"
         android:maxLines="1"
         android:layout_marginTop="16dp"
@@ -49,11 +49,11 @@
 
     <com.google.android.material.textfield.TextInputLayout
 
-        android:id="@+id/passwordInput"
+        android:id="@+id/paswordInput"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/white"
-        android:padding="4dp"
+        android:padding="1dp"
         android:ellipsize="end"
         android:maxLines="1"
         app:endIconMode="password_toggle"
@@ -86,6 +86,7 @@
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="16dp" />
+
 
     <Button
         android:id="@+id/signinButton"
