@@ -7,6 +7,7 @@ import android.widget.Button
 import android.widget.EditText
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import com.google.android.material.textfield.TextInputLayout
 
 val user="developer"
 var password="developer"
@@ -14,8 +15,8 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var loginButton : Button
     private lateinit var signinButton : Button
-    private lateinit var usernameInput : EditText
-    private lateinit var passwordInput : EditText
+    private lateinit var usernameInput : TextInputLayout
+    private lateinit var passwordInput : TextInputLayout
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,17 +28,37 @@ class MainActivity : AppCompatActivity() {
         passwordInput = findViewById(R.id.paswordInput)
 
         loginButton.setOnClickListener{
-            if( usernameInput.text.toString() == user && passwordInput.text.toString() == password){
+            if (validateUserData()){
                 toMainActivity()
-            }
-            else{
-                showDialog("Credenciales invalidas","Usuario o contraseña incorrecto. Por favor, verifica tus datos")
+                finish()
             }
         }
 
         signinButton.setOnClickListener {
             toSignActivity()
         }
+    }
+
+    private fun validateUserData(): Boolean {
+        val name = usernameInput.editText?.text.toString()
+        val password = usernameInput.editText?.text.toString()
+
+        if (name.isEmpty()) {
+            usernameInput.error = "Ingrese un nombre"
+        } else {
+            usernameInput.error = null
+            return true
+        }
+
+        if (password.isEmpty()) {
+            passwordInput.error = "Ingrese una contraseña"
+        } else if (password.length < 3) {
+            passwordInput.error = "Constraseña muy corta"
+        } else {
+            passwordInput.error = null
+            return true
+        }
+        return false
     }
 
     private fun toMainActivity() {
@@ -49,14 +70,5 @@ class MainActivity : AppCompatActivity() {
     private fun toSignActivity(){
         val siginIntent = Intent (this,SigninActivity::class.java)
         startActivity(siginIntent)
-    }
-
-    private fun showDialog(title:String, message:String){
-        AlertDialog.Builder(this)
-            .setTitle(title)
-            .setMessage(message)
-            .setPositiveButton("OK"){dialogInterface,which ->}
-            .create()
-            .show()
     }
 }
