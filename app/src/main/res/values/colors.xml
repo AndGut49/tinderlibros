@@ -9,4 +9,14 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="primary">#0C6DA8</color>
+
+    <color name="primaryColor">#0c6da8</color>
+    <color name="primaryLightColor">#559bda</color>
+    <color name="primaryDarkColor">#004279</color>
+    <color name="secondaryColor">#e9cb30</color>
+    <color name="secondaryLightColor">#fffe66</color>
+    <color name="secondaryDarkColor">#b39b00</color>
+    <color name="primaryTextColor">#ffffff</color>
+    <color name="secondaryTextColor">#000000</color>
+
 </resources>

@@ -1,7 +1,11 @@
 package com.libros.tinderlibros
 
 import android.content.Intent
+<<<<<<< HEAD
 
+=======
+import androidx.appcompat.app.AppCompatActivity
+>>>>>>> jim
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
