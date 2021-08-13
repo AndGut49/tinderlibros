@@ -1,21 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
+<<<<<<< HEAD
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+=======
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+>>>>>>> jim
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+<<<<<<< HEAD
     android:background="@color/primary"
     android:orientation="vertical"
     android:gravity="center"
     android:padding="16dp"
+=======
+>>>>>>> jim
     tools:context=".MainActivity">
 
     <ImageView
         android:id="@+id/imageView"
+<<<<<<< HEAD
         android:layout_width="152dp"
         android:layout_height="156dp"
         android:layout_marginTop="16dp"
         android:src="@drawable/logotinderlibros" />
+=======
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="274dp"
+        android:src="@drawable/logotinderlibros"
+        app:layout_constraintBottom_toTopOf="@+id/signinButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+>>>>>>> jim
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/userInput"
+        android:layout_width="328dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="173dp"
+        android:hint="@string/login_username"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
 
     <TextView
         android:id="@+id/textBienvenido"
@@ -23,6 +61,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:text="@string/login_message"
+<<<<<<< HEAD
         android:textColor="@color/white"
         android:textSize="24dp"/>
 
@@ -96,3 +135,58 @@
         android:background="@drawable/round_button"
         android:text="@string/signin_button" />
 </LinearLayout>
+=======
+        android:textColor="@color/black"
+        android:textSize="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/paswordInput"
+        android:layout_width="328dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/login_password"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userInput"
+        app:layout_constraintVertical_bias="0.081"
+        app:endIconMode="password_toggle">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:inputType="textPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/loginButton"
+        android:backgroundTint="@color/secondaryColor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/login_button"
+        app:layout_constraintBaseline_toBaselineOf="@+id/signinButton"
+        app:layout_constraintEnd_toStartOf="@+id/signinButton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/signinButton"
+        style="?attr/materialButtonOutlinedStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="256dp"
+        android:text="@string/signin_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/loginButton" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+>>>>>>> jim
