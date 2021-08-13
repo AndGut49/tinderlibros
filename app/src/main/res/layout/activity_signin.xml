@@ -1,81 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<<<<<<< HEAD
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-=======
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
->>>>>>> jim
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-<<<<<<< HEAD
-    android:background="@color/primary"
-    android:orientation="vertical"
-    android:gravity="center"
-    android:padding="16dp"
-    tools:context=".SigninActivity">
-=======
     tools:context=".MainActivity">
->>>>>>> jim
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="152dp"
         android:layout_height="156dp"
         android:layout_marginTop="16dp"
-<<<<<<< HEAD
-        android:src="@drawable/logotinderlibros" />
-=======
         android:src="@drawable/logotinderlibros"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
->>>>>>> jim
 
     <TextView
-        android:id="@+id/textBienvenido"
+        android:id="@+id/textRegistrate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-<<<<<<< HEAD
-        android:text="Registate"
-        android:textColor="@color/white"
-        android:textSize="24dp"/>
-
-
-    <com.google.android.material.textfield.TextInputLayout
-
-        android:id="@+id/userInput"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/white"
-        android:padding="1dp"
-        android:ellipsize="end"
-        android:maxLines="1"
-        android:layout_marginTop="16dp"
-        android:hint="Usuario">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            />
-
-    </com.google.android.material.textfield.TextInputLayout>
-
-
-    <com.google.android.material.textfield.TextInputLayout
-
-        android:id="@+id/paswordInput"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/white"
-        android:padding="1dp"
-        android:ellipsize="end"
-        android:maxLines="1"
-        app:endIconMode="password_toggle"
-        android:hint="Contraseña"
-        android:layout_marginTop="16dp">
-=======
         android:text="@string/signin_message"
         android:textColor="@color/black"
         android:textSize="24dp"
@@ -114,48 +59,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/userInput"
         app:layout_constraintVertical_bias="0.081">
->>>>>>> jim
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-<<<<<<< HEAD
-            android:inputType="textPassword"
-            />
-=======
             android:inputType="textPassword" />
->>>>>>> jim
 
     </com.google.android.material.textfield.TextInputLayout>
 
 
     <Button
         android:id="@+id/signinButton"
-<<<<<<< HEAD
-        android:layout_width="156dp"
-        android:layout_height="43dp"
-        android:layout_marginTop="16dp"
-        android:background="@drawable/round_button"
-        android:text="Registarme" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="¿Ya tienes cuenta?"
-        android:textAlignment="center"
-        android:textColor="@color/white"
-        android:textSize="16dp" />
-    <Button
-        android:id="@+id/loginButton"
-        android:layout_width="156dp"
-        android:layout_height="43dp"
-        android:layout_marginTop="16dp"
-        android:background="@drawable/round_button"
-        android:text="Iniciar sesión" />
-</LinearLayout>
-=======
         style="?attr/materialButtonOutlinedStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -178,4 +92,3 @@
         app:layout_constraintStart_toEndOf="@+id/signinButton"
         app:layout_constraintTop_toBottomOf="@+id/paswordInput" />
 </androidx.constraintlayout.widget.ConstraintLayout>
->>>>>>> jim
