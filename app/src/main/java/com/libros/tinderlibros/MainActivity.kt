@@ -5,12 +5,13 @@ import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.textfield.TextInputLayout
 
-val user="developer"
-var password="developer"
+val userC="developer"
+var passwordC="developer"
 class MainActivity : AppCompatActivity() {
 
     private lateinit var loginButton : Button
@@ -58,6 +59,7 @@ class MainActivity : AppCompatActivity() {
             passwordInput.error = null
             return true
         }
+
         return false
     }
 
